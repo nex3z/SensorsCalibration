@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(LidarToLidar)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-std=c++11 -g -Wall")
+
+set(Qt5_DIR /opt/homebrew/opt/qt@5/lib/cmake/Qt5)
+include_directories(/opt/homebrew/Cellar/jsoncpp/1.9.5/include)
+link_directories(/opt/homebrew/Cellar/jsoncpp/1.9.5/lib)
+
 ## Get Pangolin
 find_package(Pangolin 0.4 REQUIRED)
 include_directories(${Pangolin_INCLUDE_DIRS})
